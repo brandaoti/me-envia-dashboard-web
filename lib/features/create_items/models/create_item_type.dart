@@ -1,0 +1,4 @@
+enum CreateItemType {
+  create,
+  edit,
+}

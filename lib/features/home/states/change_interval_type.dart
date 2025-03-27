@@ -1,0 +1,4 @@
+enum ChangeIntervalType {
+  initialDate,
+  finalDate,
+}

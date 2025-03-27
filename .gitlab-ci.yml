@@ -1,0 +1,41 @@
+stages:
+  - test
+  - build
+  - deploy
+
+Test:
+  tags:
+    - mac-build
+  stage: test
+  script:
+    - flutter test --no-sound-null-safety --platform chrome
+
+Build:
+  image: cirrusci/flutter:2.2.3
+  stage: build
+  only:
+    - main
+    - dev
+  script:
+    - flutter clean
+    - flutter build web --dart-define=BASE_URL=$BASE_URL --dart-define=TEMPLATE_ID=$TEMPLATE_ID --dart-define=SERVICE_ID=$SERVICE_ID --dart-define=USER_ID=$USER_ID --release --no-sound-null-safety --web-renderer html
+  artifacts:
+    paths:
+      - build/web
+    expire_in: 7 days
+
+Deploy:
+  image: registry.cubos.io/cubos/cli
+  stage: deploy
+  only:
+    - dev
+    - main
+  dependencies:
+    - Build
+  script:
+    - deploy_site
+  variables:
+    public_files_dir: build/web
+    environment: dev
+    project: maria-me-envia-admin-web
+    ingress: public

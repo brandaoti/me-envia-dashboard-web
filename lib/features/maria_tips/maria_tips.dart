@@ -1,0 +1,9 @@
+export 'screens/create_new_tips/create_new_tips_controller.dart';
+export 'screens/create_new_tips/create_tips_screen.dart';
+export 'components/card_maria_tips_component.dart';
+export 'components/modal_create_new_tip.dart';
+export 'screens/maria_tips_controller.dart';
+export 'screens/maria_tips_screen.dart';
+export 'screens/maria_tips_screen.dart';
+export 'states/maria_tips_state.dart';
+export 'components/total_tips.dart';

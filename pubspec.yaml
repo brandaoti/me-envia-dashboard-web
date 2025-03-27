@@ -1,0 +1,92 @@
+name: maria_me_envia_mobile_admin_web
+description: Flutter boilerplate
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_web_plugins:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: 1.0.0
+
+  # Cubos' libraries
+  cubos_widgets: ^1.4.0
+  cubos_extensions: ^1.2.0
+
+  # client http
+  dio: ^4.0.0
+  cached_network_image: ^3.1.0
+
+  # project structure
+  flutter_modular: ^3.3.1
+
+  #Save data
+  shared_preferences: ^2.0.6
+  flutter_dotenv: ^5.0.0
+
+  # utils
+  uuid: ^3.0.4
+  file_picker: ^4.0.1
+  file_saver: ^0.0.10
+  path_provider: ^2.0.3
+  dotted_border: ^2.0.0+1
+
+  charts_flutter:
+    git:
+      url: git://github.com/google/charts.git
+      path: charts_flutter
+
+  # Reactive programming
+  rxdart: ^0.27.1
+
+  # Material icons
+  google_fonts: ^2.1.0
+  material_design_icons_flutter: ^4.0.5755
+  flutter_svg: ^0.20.0-nullsafety.3
+  intl: ^0.17.0
+
+  # mask text
+  cpfcnpj: ^1.0.3
+  auto_size_text: ^2.1.0
+  flutter_masked_text: ^0.8.0
+  mask_text_input_formatter: ^2.0.0-nullsafety.2
+
+  mocktail: ^0.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.9.0
+  flutter_lints: ^1.0.4
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/svgs/
+    - assets/images/
+
+  # FLUTTER LAUNCHER ICONS
+  # Run the following code on terminal to generate the launcher icons:
+  # flutter pub get
+  # flutter pub run flutter_launcher_icons:main
+  #https://pub.dev/packages/flutter_launcher_icons
+flutter_icons:
+  ios: true
+  android: true
+  image_path: "assets/icons/icon.png" #for iOS
+  adaptive_icon_background: "#F23384D" #for Android
